@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SQL</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<header>
+		<h1>SQL</h1>
+		<a href id="open-nav">NAV</a>
+		<nav id="main-nav">
+			<a href id="close-nav">X</a>
+			<a href>Create</a>
+			<a href>Insert</a>
+			<a href>Update</a>
+			<a href>Delete</a>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<h2>Create</h2>
+			<div>
+				<div>
+					<p>Create Table</p>
+					<a>Plus</a>
+				</div>
+				<div>
+					<code>
+						CREATE TABLE osoba
+							(
+								maticni NVARCHAR(15),
+								ime NVARCHAR(15) NOT NULL,
+								prezime NVARCHAR(15) NOT NULL,
+								ulica NVARCHAR(25),
+								mjesto NVARCHAR(15) DEFAULT ’Zagreb’
+								PRIMARY KEY (maticni)
+							);
+					</code>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>&copy;2019</p>
+	</footer>
+	<script src="script.js"></script>
+</body>
+
+</html>
