@@ -19,25 +19,25 @@
 		</nav>
 	</header>
 	<main>
-		<section>
+		<section id="section-create">
 			<h2>Create</h2>
-			<div>
-				<div>
+			<div class="section-wrapper">
+				<div class="section-header">
 					<p>Create Table</p>
-					<a>Plus</a>
+					<a href id="toggle-create">Plus</a>
 				</div>
-				<div>
-					<code>
-						CREATE TABLE osoba
-							(
-								maticni NVARCHAR(15),
-								ime NVARCHAR(15) NOT NULL,
-								prezime NVARCHAR(15) NOT NULL,
-								ulica NVARCHAR(25),
-								mjesto NVARCHAR(15) DEFAULT ’Zagreb’
-								PRIMARY KEY (maticni)
-							);
-					</code>
+				<div class="section-content hide">
+<pre>
+CREATE TABLE osoba 
+(
+	maticni NVARCHAR(15),
+	ime NVARCHAR(15) NOT NULL,
+	prezime NVARCHAR(15) NOT NULL,
+	ulica NVARCHAR(25),
+	mjesto NVARCHAR(15) DEFAULT ’Zagreb’
+	PRIMARY KEY (maticni)
+);
+</pre>
 				</div>
 			</div>
 		</section>
