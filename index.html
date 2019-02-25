@@ -9,9 +9,9 @@
 <body>
 	<header>
 		<h1>SQL</h1>
-		<a href id="open-nav">NAV</a>
+		<a href id="open-nav"><img src="navigation-buttonOpen.png"></a>
 		<nav id="main-nav">
-			<a href id="close-nav">X</a>
+			<a href  id="close-nav"><img src="navigation-buttonClose.svg"></a>
 			<a href>Create</a>
 			<a href>Insert</a>
 			<a href>Update</a>
@@ -37,6 +37,56 @@ CREATE TABLE osoba
 	mjesto NVARCHAR(15) DEFAULT ’Zagreb’
 	PRIMARY KEY (maticni)
 );
+</pre>
+				</div>
+			</div>
+		</section>
+	
+	<section id="section-insert">
+			<h2>Insert</h2>
+			<div class="section-wrapper">
+				<div class="section-header">
+					<p>Insert Into Table</p>
+					<a href id="toggle-insert">Plus</a>
+				</div>
+				<div class="section-content hide">
+<pre>
+INSERT INTO osoba VALUES (’0102968383911 ’,’Pero’,’Peric’,’Gajeva 3 ’,’Zagreb ’)
+INSERT INTO osoba VALUES (’0302982383818 ’,’Ivan’,’Ivic’,’’,’Split ’)
+INSERT INTO osoba VALUES (’0305972383915 ’,’Marko’,’Maric’,’Lavova 67 ’,’Zadar ’)
+INSERT INTO osoba VALUES (’1212972383944 ’,’Ivan’,’Dundov’,’Obala 4 ’,’Zagreb ’)
+</pre>
+				</div>
+			</div>
+		</section>
+		<section id="section-update">
+			<h2>Update</h2>
+			<div class="section-wrapper">
+				<div class="section-header">
+					<p>Update Table</p>
+					<a href id="toggle-update">Plus</a>
+				</div>
+				<div class="section-content hide">
+<pre>
+UPDATE osoba SET ulica =’Nema podatka’
+WHERE ulica =’’OR ulica IS NULL
+</pre>
+				</div>
+			</div>
+		</section>
+		<section id="section-delete">
+			<h2>Delete</h2>
+			<div class="section-wrapper">
+				<div class="section-header">
+					<p>Delete From Table</p>
+					<a href id="toggle-delete">Plus</a>
+				</div>
+				<div class="section-content hide">
+<pre>
+DELETE * FROM osoba;
+DELETE FROM osoba WHERE mjesto =’Zadar’;
+DELETE FROM osoba WHERE mjesto =’Zagreb’;
+DELETE FROM osoba WHERE mjesto =’Split’;
 </pre>
 				</div>
 			</div>
