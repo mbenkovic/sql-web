@@ -1,13 +1,11 @@
 /* Open */
 function openNav(ev) {
-	console.log("openNav");
 	if (ev) ev.preventDefault();
 	document.getElementById("main-nav").style.display = "block";
 }
 
 /* Close */
 function closeNav(ev) {
-	console.log("closeNav");
 	if (ev) ev.preventDefault();
 	document.getElementById("main-nav").style.display = "none";
 }
@@ -25,7 +23,7 @@ let toggleListener=function(ev) {
 	let attributeEl=null;
 	if (ev.target.tagName==="IMG") {
 		attributeEl=ev.target.parentElement;
-	} else if (ev.target.tagName="A"){
+	} else if (ev.target.tagName==="A"){
 		attributeEl=ev.target;
 	}
 	let targetAttribute=attributeEl.getAttribute("data-id");
@@ -43,12 +41,21 @@ for (let el of toggleElements) {
 	el.addEventListener("click", toggleListener);
 }
 
-/* function changeImage() {
-    if (document.getElementsByClassName("imgSection").src==="section-open.svg") {
-    	console.log("dinamo2");
-    	document.getElementsByClassName("imgSection").src="section-close.svg";	
-    } else {
-    	document.getElementsByClassName("imgSection").src="section-open.svg";	
+/*Change Section Image */
+let imgElements=document.getElementsByClassName("imgSection");
+for (let el of imgElements) {
+	el.addEventListener("click", changeImage);
+}
+
+function changeImage(ev) {
+    if (ev) ev.preventDefault();
+    let oldSrc=ev.target.getAttribute("src");
+    let newSrc;
+    if (oldSrc==="section-open.svg") {
+    	newSrc="section-close.svg";	
+    } else if (oldSrc==="section-close.svg") {
+    	newSrc="section-open.svg";	
     }
-} */
+    ev.target.setAttribute("src", newSrc);
+}
     
