@@ -6,12 +6,15 @@ function openNav(ev) {
 
 /* Close */
 function closeNav(ev) {
-	if (ev) ev.preventDefault();
 	document.getElementById("main-nav").style.display = "none";
 }
 
-let closeNavEl=document.getElementById("close-nav");
-closeNavEl.addEventListener("click", closeNav);
+
+let closeNavEls=document.querySelectorAll("#main-nav a");
+for (let el of closeNavEls) {
+	el.addEventListener("click", closeNav);
+}
+
 
 let openNavEl=document.getElementById("open-nav");
 openNavEl.addEventListener("click", openNav);

@@ -44,6 +44,10 @@ h1 {
 	right: 0;
 }
 
+#close-nav:hover{
+	cursor: pointer;
+}
+
 #main-nav {
 	display: none;
 	position: fixed;
