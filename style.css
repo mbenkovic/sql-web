@@ -27,6 +27,7 @@ h1 {
 	text-align: center;
 	line-height: 300px;
 	margin: 0;
+	font-size: 50px;
 }
 
 #open-nav img, #close-nav img {
@@ -68,8 +69,9 @@ h1 {
 	text-decoration: none;
 	text-transform: uppercase;
 	line-height: 25vh;
-	font-size: 80px;
+	font-size: 30px;
 }
+
 
 #main-nav a:not(#close-nav):nth-child(2n) {
 	background: rgb(200, 200, 200);
@@ -128,4 +130,14 @@ pre {
 
 footer {
 	text-align: center;
+}
+
+
+@media (min-width: 640px) {
+	#main-nav a:not(#close-nav){
+		font-size: 60px;
+	}
+	h1 {
+		font-size: 80px;
+	}	
 }
